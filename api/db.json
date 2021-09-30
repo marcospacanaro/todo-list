@@ -1,0 +1,16 @@
+{
+    "data": [
+        {
+            "id": 1,
+            "value": "Passear com o cachorro"
+        },
+        {
+            "id": 2,
+            "value": "Estudar React"
+        },
+        {
+            "id": 3,
+            "value": "Fazer compras"
+        }
+    ]
+}
