@@ -10,6 +10,8 @@ function Todo({todos, completeTodo, updateTodo, removeTodo}) {
         value: ''
     });
 
+    console.log(todos)
+
     const submitUpdate = value => {
         updateTodo(edit.id, value)
         setEdit({
@@ -27,7 +29,7 @@ function Todo({todos, completeTodo, updateTodo, removeTodo}) {
         key={index}>
 
             <div key={todo.id} onClick={() => completeTodo(todo.id)}>
-                {todo.text}
+                {todo.value}
             </div>
 
             <div className="icons">

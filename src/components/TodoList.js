@@ -1,9 +1,18 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
+import { getTodoList } from '../services/serviceApi';
 import Todo from './Todo';
 import TodoForm from './TodoForm'
 
 function TodoList() {
     const [todos, setTodos] = useState([])
+
+    useEffect(() => {
+        getTodoList()
+          .then(data => 
+          setTodos(data)
+        )
+      }, [])
+
     const addTodo = todo => {
         if(!todo.text || /^\s*$/.test(todo.text)) {
              return
