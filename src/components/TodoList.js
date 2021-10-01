@@ -13,16 +13,7 @@ function TodoList() {
         )
       }, [])
 
-    const addTodo = todo => {
-        if(!todo.text || /^\s*$/.test(todo.text)) {
-             return
-        }
-
-        const newTodos = [todo, ...todos]
-
-        setTodos(newTodos)
-    };
-
+   
     const updateTodo = (todoId, newValue) => {
         if(!newValue.text || /^\s*$/.test(newValue.text)) {
             return
@@ -50,8 +41,11 @@ function TodoList() {
     return (
         <div>
             <h1>Quais os planos para hoje?</h1>
-            <TodoForm onSubmit={addTodo}/>
-            <Todo todos={todos} completeTodo={completeTodo} removeTodo={removeTodo} updateTodo={updateTodo}/>
+            <TodoForm />
+            <Todo todos={todos} 
+            completeTodo={completeTodo} 
+            removeTodo={removeTodo} 
+            updateTodo={updateTodo}/>
         </div>
     )
 }
