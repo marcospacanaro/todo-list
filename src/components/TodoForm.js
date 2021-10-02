@@ -1,5 +1,5 @@
 import React, {useState, useEffect, useRef} from 'react';
-import { postTodoList } from '../services/serviceApi';
+import { postTodoTask, updateTodoTask, getTodoList } from '../services/serviceApi';
 
 function TodoForm(props) {
     const [input, setInput] = useState(props.edit ? props.edit.value : '');
@@ -7,7 +7,7 @@ function TodoForm(props) {
     const inputRef = useRef(null);
 
     useEffect(() => { 
-        inputRef.current.focus()
+       inputRef.current.focus()
     })
     
     const handleChange = e => {
@@ -16,19 +16,29 @@ function TodoForm(props) {
 
     const handleSubmit = e => {
         e.preventDefault();
+        
+        if (props.edit) {
+            updateTodoTask(props.edit.id, input)
+        } else {
+            postTodoTask(input)
+        }
 
-        postTodoList(
-            input
-        )
-
-    setInput('')
-    
+        setInput('')
+        props.updateTodo();
     };
+
+    const validateInput = (value) => {
+        if(!value || /^\s*$/.test(value)) {
+            return true;
+       } else {
+           return false;
+       }
+    }
 
     return (
         <form className="todo-form" onSubmit={handleSubmit}>
 
-        {props. edit ? (
+        {props.edit ? (
             <>
             <input type="text" 
              placeholder="Editar uma tarefa" 
@@ -38,7 +48,7 @@ function TodoForm(props) {
              onChange={handleChange}
              ref={inputRef}
             />
-             <button className="todo-button edit">Editar</button>
+             <button className="todo-button edit" disabled={validateInput(input)}>Editar</button>
              </>
              ) :
              
@@ -52,7 +62,7 @@ function TodoForm(props) {
              onChange={handleChange}
              ref={inputRef}
             />
-             <button className="todo-button">Adicionar</button>
+             <button className="todo-button" disabled={validateInput(input)}>Adicionar</button>
              </>
             )
              

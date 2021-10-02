@@ -69,6 +69,11 @@
     color: #fff;
     text-transform: capitalize;
   }
+
+  .todo-button:disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+  }
   
   .todo-input.edit {
     border: 2px solid #149fff;

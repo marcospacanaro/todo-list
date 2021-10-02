@@ -5,21 +5,17 @@ import TodoForm from './TodoForm'
 
 function TodoList() {
     const [todos, setTodos] = useState([])
+    const [updateList, setUpdateList] = useState(0)
 
     useEffect(() => {
         getTodoList()
           .then(data => 
           setTodos(data)
         )
-      }, [])
+      }, [updateList])
 
-   
-    const updateTodo = (todoId, newValue) => {
-        if(!newValue.text || /^\s*$/.test(newValue.text)) {
-            return
-       }
-
-       setTodos(prev => prev.map(item => (item.id == todoId ? newValue : item)))
+    const updateTodo = () => {
+        setUpdateList(updateList + 1)
     }
 
     const removeTodo = id => { 
@@ -41,11 +37,12 @@ function TodoList() {
     return (
         <div>
             <h1>Quais os planos para hoje?</h1>
-            <TodoForm />
-            <Todo todos={todos} 
-            completeTodo={completeTodo} 
-            removeTodo={removeTodo} 
-            updateTodo={updateTodo}/>
+            <TodoForm todos={todos} updateTodo={updateTodo} />
+            <Todo 
+                todos={todos}
+                setTodos={setTodos}
+                completeTodo={completeTodo} 
+                removeTodo={removeTodo}/>
         </div>
     )
 }
