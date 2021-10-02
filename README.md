@@ -1,70 +1,42 @@
-# Getting Started with Create React App
+# Descrição do Projeto
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Criar uma aplicação que fornecerá um espaço para o usuário criar, consultar, editar e deletar tarefas diárias para melhor organização e maior performance de um dia profissional ou pessoal. 
 
-## Available Scripts
+Projeto desenvolvido como teste técnico para processo seletivo na empresa [Klever](https://klever.io/).
 
-In the project directory, you can run:
+## Como Instalar 
 
-### `yarn start`
+1. Fazer o download do repositório
+2. Acessar a pasta do projeto pelo terminal e executar o comando abaixo:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+``npm install``
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Como Executar
 
-### `yarn test`
+### Front-End
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+No diretório do projeto, execute o seguinte comando: 
 
-### `yarn build`
+``npm start`` 
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Roda o projeto em modo de desenvolvimento e inicia automaticamente no navegador através da URL [http://localhost:3000](http://localhost:3000).
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+A página recarregará mediante quaisquer edições ou alterações.\
+Também é possível consultar erros de execução no console.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Mock API - JSON Server
 
-### `yarn eject`
+Acessar a pasta "api" e executar o comando:
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+``npm start``
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Inicia o JSON Server, uma biblioteca para mock de Rest API. 
+O servidor será executado em [http://localhost:5000](http://localhost:5000).
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Construído com
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- [React.js](https://github.com/facebook/react) - This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app)
+- [VsCode](https://code.visualstudio.com/) - Code Editor | IDE
+- react-hooks
+- react-icons
+- JSON Server
