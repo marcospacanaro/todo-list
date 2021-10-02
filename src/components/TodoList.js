@@ -6,6 +6,10 @@ import TodoForm from './TodoForm'
 function TodoList() {
     const [todos, setTodos] = useState([])
     const [updateList, setUpdateList] = useState(0)
+    const [edit, setEdit] = useState ({
+        id: null,
+        value: ''
+    });
 
     useEffect(() => {
         getTodoList()
@@ -16,12 +20,6 @@ function TodoList() {
 
     const updateTodo = () => {
         setUpdateList(updateList + 1)
-    }
-
-    const removeTodo = id => { 
-        const removeArr = [...todos].filter(todo => todo.id !== id)
-
-        setTodos(removeArr)
     }
 
     const completeTodo = id => {
@@ -37,12 +35,14 @@ function TodoList() {
     return (
         <div>
             <h1>Quais os planos para hoje?</h1>
-            <TodoForm todos={todos} updateTodo={updateTodo} />
+            <TodoForm todos={todos} updateTodo={updateTodo} edit={edit} setEdit={setEdit} />
             <Todo 
                 todos={todos}
                 setTodos={setTodos}
+                setEdit={setEdit}
                 completeTodo={completeTodo} 
-                removeTodo={removeTodo}/>
+                updateTodo={updateTodo}
+            />
         </div>
     )
 }
