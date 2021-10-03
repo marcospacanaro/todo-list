@@ -1,16 +1,20 @@
 {
   "data": [
     {
-      "value": "Passear com o Gato",
-      "id": 1
-    },
-    {
       "value": "Estudar React",
       "id": 2
     },
     {
-      "value": "Fazer compras",
+      "value": "Fazer compra",
       "id": 3
+    },
+    {
+      "value": "Testando o deletes",
+      "id": 4
+    },
+    {
+      "value": "Fazer carinho no gato",
+      "id": 5
     }
   ]
 }
