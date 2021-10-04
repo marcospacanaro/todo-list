@@ -1,7 +1,6 @@
 import React from 'react'
 import { RiCloseCircleLine } from 'react-icons/ri'
 import { TiEdit } from 'react-icons/ti'
-
 import { deleteTodoTask } from '../../services/serviceApi'
 import './Todo.css'
 
@@ -17,7 +16,7 @@ function Todo({ todos, setEdit, completeTodo, updateTodo }) {
             key={index}
         >
             <div key={todo.id} onClick={() => completeTodo(todo.id)}>
-                {todo.value}
+                {todo.value}{' '}
             </div>
 
             <div className="icons">

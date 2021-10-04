@@ -2,19 +2,39 @@
   "data": [
     {
       "value": "Estudar React",
+      "id": 1
+    },
+    {
+      "value": "Participar de processos seletivos",
       "id": 2
     },
     {
-      "value": "Fazer compra",
+      "value": "Fazer compras",
       "id": 3
     },
     {
-      "value": "Testando o deletes",
+      "value": "Passear com o cachorro",
       "id": 4
     },
     {
-      "value": "Fazer carinho no gato",
+      "value": "Pagar boletos",
       "id": 5
+    },
+    {
+      "value": "Responder e-mails",
+      "id": 6
+    },
+    {
+      "value": "Interagir no LinkedIn",
+      "id": 7
+    },
+    {
+      "value": "Manter o GitHub ativo",
+      "id": 8
+    },
+    {
+      "value": "Pagar conta de Internet",
+      "id": 9
     }
   ]
 }
