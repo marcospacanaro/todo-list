@@ -11,6 +11,10 @@ Projeto desenvolvido como teste técnico para processo seletivo na empresa [Klev
 
 ``npm install``
 
+3. Acessar a pasta "api" pelo terminal e executar o comando abaixo:
+
+``npm install``
+
 ## Como Executar
 
 ### Front-End
